@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+  /* .collapse {
+
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 75%;
+    width: 50%;
+    transition: 1s 0.7s ease-in-out;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+
+  } 
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0rem 5rem;
+    transition: all 0.2s 0.7s;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  form input[type=text],
+  form select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  form input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  form input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }*/
+</style>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 5px;
+    margin-bottom: 16px;
+}
+.btn1 {
+    outline: 0px auto -webkit-focus-ring-color!important;
+    outline-offset: 0px!important;
+}
+.collapse.in {
+    display: block;
+    height: 249px;
+}
+  btn{
+    margin-top: 10px;
+  }
+  .btn-info:hover {
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #269abc;
+    border-radius: 55px;
+}
+
+  
+  .btn1 {
+    margin-top: 28vh;
+    margin-left: 14%;
+    padding-top: 1%;
+    border-radius: 55px;
+    width: 20%;
+    height: 50px;
+    margin-bottom: -44px;
+}
+.update-cus-btn {
+    margin-top: -5vh!important;
+    margin-left: 66%;
+    border-radius: 55px;
+    width: 20%;
+    height: 50px;
+    margin-bottom: -36px;
+}
+  .update-cus-btn:active,.update-cus-btn:hover,.update-cus-btn:focus{
+  outline: 0px auto -webkit-focus-ring-color!important;
+  outline-offset: 0px!important;
+}
+
+
+
+  .form_1{
+  margin: 6em;
+  padding: 2rem 0rem!important;
+  padding-left: 2rem!important;
+  padding-right: 2rem!important;
+  background-color: white;
+  max-width: 92%;
+  box-shadow: 2px 2px 2px 2px #888888;
+}
+label{
+  margin-left: 1px!important;
+}
+.form_2{
+  margin: 6em;
+  padding: 2rem 0rem!important;
+  padding-left: 2rem!important;
+  padding-right: 2rem!important;
+  background-color: white;
+  max-width: 92%;
+  box-shadow: 2px 2px 2px 2px #888888;
+}
+</style>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-12">
+        <a href="#demo_form" class="btn btn-info btn1" data-toggle="collapse" style="background-color: #00BFFF;">Update Customer Account</a>
+        <button type="button" class="btn btn-info update-cus-btn" data-toggle="collapse" data-target="#demo_form_2" style="background-color:#00ff80	;">Update Customer
+          Profile</button>
+      </div>
+    
+      <div class="row">
+        <div class="col-md-6">
+          <div id="demo_form" class="collapse form_1" >
+            <h3 align="center" style="color:#666666;">Update Customer Account</h3>
+            
+            <form action="/action_page.php" class="form1">
+
+              <div class="form-outline" style="box-sizing: border-box;">
+                <label class="control-label col-sm-2" for="email" >Email:</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" align="middle" id="email" placeholder="Enter email">
+                </div>
+              </div></br></br>
+              <div class="form-outline">
+                <label class="control-label col-sm-2" for="pwd">Password:</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" align="right"  id="pwd" placeholder="Enter password">
+                </div>
+              </div>
+
+              
+              
+
+              <input type="submit" value="Submit" style="padding: left 2px; margin-top: 14vh;margin-left: -283px;width: 100px;background-color: #00BFFF;">
+            </form>
+          </div>
+          
+        </div>
+        <div class="col-md-6">
+          <div id="demo_form_2" class="collapse form_1" >
+            <h3 align="center" style="color:#666666;">Update Customer Profile</h3>
+            
+            <form action="/action_page.php"  style="width:100%;">
+
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Email:</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+              </div></br></br>
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Password:</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                </div>
+              </div>
+
+              
+              
+
+              <input type="submit" value="Submit" style="padding: left 2px; margin-top: 12vh;margin-left: -283px;width: 100px;background-color: #00ff80				;">
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+{% extends 'inventory_html/main.html' %}
+
+{% load static %}
+{% block sidebar %}
+
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}">
+</head>
+<style>
+.col-md-12{
+  margin: 6em;
+  padding: 2rem 0rem!important;
+  padding-left: 2rem!important;
+  padding-right: 2rem!important;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px #888888;
+}
+.btn-primary{
+color: #fff!important;
+background-color: #141515!important;
+border-color: #2829a!important;
+}
+
+</style>
+<style>
+label {
+    color: white !important;
+    background: black !important;
+}
+.dataTables_info{
+    color: white !important;
+    background: black !important;
+
+}
+.text-warning{
+    color: #d22222!important;
+    text-align: center;
+}
+.form-data{
+    padding-left: 1%!important;
+}
+</style>
+
+{% endblock %}
+{% block content %}
+<div class="row mx-auto">
+<div class="col-md-12">
+<form method="post" enctype="multipart/form-data" style="padding-left:8%;" class="form-data">
+    {% csrf_token %}
+    <h3 align="center">Export Data</h3>
+    <p align="center">Exporting from database</p>
+    <p>Please select format of file.</p>
+    <select name="file-format" class="form-control my-3">
+        <option selected>Choose format...</option>
+        <option>CSV</option>
+        <option>JSON</option>
+        <option>XLS (Excel)</option>
+      </select>
+    <button class="btn btn-primary" type="submit">Export</button>
+  </form>
+</div>
+</div>
+  {% endblock %}

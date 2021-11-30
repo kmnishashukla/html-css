@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  
+  <style>
+    body{
+      background-color: #F2EDF3;
+    }
+      
+      .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: 427px;
+    margin-top: 10vh;
+}
+.btn-gradient-primary {
+    background: linear-gradient(to right, #da8cff, #9a55ff);
+    border: 0;
+    transition: opacity 0.3s ease;
+}
+.btn {
+    font-size: 0.875rem;
+    line-height: 1;
+    font-family: "ubuntu-bold", sans-serif;
+}
+.card {
+  margin-left: -213px;
+    margin-right: 211px;
+}
+      
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row clearfix">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+          <div class="header">
+            <h2>
+                VERTICAL LAYOUT
+            </h2>
+            
+        </div>
+
+        <div class="body">
+          <form>
+              <label for="email_address">Email Address</label>
+              <div class="form-group">
+                  <div class="form-line">
+                      <input type="text" id="email_address" class="form-control" placeholder="Enter your email address">
+                  </div>
+              </div>
+              <label for="password">Password</label>
+              <div class="form-group">
+                  <div class="form-line">
+                      <input type="password" id="password" class="form-control" placeholder="Enter your password">
+                  </div>
+              </div>
+
+              <input type="checkbox" id="remember_me" class="filled-in">
+              <label for="remember_me">Remember Me</label>
+              <br>
+              <button type="button" class="btn btn-primary m-t-15 waves-effect">LOGIN</button>
+          </form>
+      </div>
+        </div>
+      </div>
+    </div>
+   </div> 
+
+</body>
+</html>
